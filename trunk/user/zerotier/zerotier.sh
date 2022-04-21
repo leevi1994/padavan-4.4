@@ -39,7 +39,7 @@ start_instance() {
 	fi
 
 	add_join $(nvram get zerotier_id)
-
+        cp /etc/storage/planet /etc/storage/zerotier-one/planet
 	$PROG $args $config_path >/dev/null 2>&1 &
 		
 	rules
